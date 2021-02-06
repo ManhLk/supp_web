@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<title>Demo JS jQuery</title>
+		<style>
+			.tra_loi{
+				position: absolute;
+				top:50px;
+				right:0;
+				left: 0;
+				bottom: 0;
+				display: flex;
+				align-items: center;
+			}
+			.tra_loi #yes{
+				position: absolute;
+				top:50px;
+				left: 250px;
+				width: 250px;
+				height: 40px;
+				cursor: pointer;
+			}
+			.tra_loi #no{
+				position: absolute;
+				top:50px;
+				right: 250px;
+				width: 250px;
+				height: 40px;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<h2 style="text-align: center; cursor: pointer;">Bạn có phải là phò không?</h2>
+		<div class="tra_loi">
+			<button id="yes">Có, tôi là phò chính hiệu</button>
+			<button id="no">Không. hỏi bậy bạ</button>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+		<script>
+			$('#yes').click(function(){
+				alert("Tôi biết mà he he !");
+			})
+			$('#no').mouseenter(function(){
+				$('#no').css({
+					"top": Math.round(Math.random()*450,0),
+                    "right": Math.round(Math.random()*780,0)
+				})
+			})
+			$(`h2`).click(function(){
+				$('h2').hide()
+			})
+		</script>
+	</body>
+</html>
